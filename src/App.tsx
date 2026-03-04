@@ -223,58 +223,59 @@ export default function App() {
     // Sila tukar nombor ini kepada nombor WhatsApp Kamus Catur yang sebenar
     const phone = "60182046224"; 
     
-    let text = `*BORANG PERANCANGAN PROGRAM CATUR SEKOLAH*%0A%0A`;
+    let text = `*BORANG PERANCANGAN PROGRAM CATUR SEKOLAH*\n\n`;
     
-    text += `*A. MAKLUMAT ASAS*%0A`;
-    text += `Sekolah: ${formData.namaSekolah}%0A`;
-    text += `Kategori: ${formData.kategori}%0A`;
-    text += `Daerah: ${formData.daerah}%0A`;
-    text += `Guru: ${formData.namaGuru} (${formData.jawatan})%0A`;
-    text += `No Tel: ${formData.noTelefon}%0A`;
-    text += `Emel: ${formData.emel}%0A%0A`;
+    text += `*A. MAKLUMAT ASAS*\n`;
+    text += `Sekolah: ${formData.namaSekolah}\n`;
+    text += `Kategori: ${formData.kategori}\n`;
+    text += `Daerah: ${formData.daerah}\n`;
+    text += `Guru: ${formData.namaGuru} (${formData.jawatan})\n`;
+    text += `No Tel: ${formData.noTelefon}\n`;
+    text += `Emel: ${formData.emel}\n\n`;
     
-    text += `*B. TUJUAN PROGRAM*%0A`;
-    text += `Tujuan: ${formData.tujuan.join(', ')}%0A`;
+    text += `*B. TUJUAN PROGRAM*\n`;
+    text += `Tujuan: ${formData.tujuan.join(', ')}\n`;
     if (formData.tujuan.includes("Persiapan kejohanan")) {
-      text += `Tarikh Kejohanan: ${formData.tarikhKejohanan}%0A`;
-      text += `Peringkat: ${formData.peringkatKejohanan}%0A`;
-      text += `Minggu Sebelum: ${formData.mingguSebelumKejohanan}%0A`;
+      text += `Tarikh Kejohanan: ${formData.tarikhKejohanan}\n`;
+      text += `Peringkat: ${formData.peringkatKejohanan}\n`;
+      text += `Minggu Sebelum: ${formData.mingguSebelumKejohanan}\n`;
     }
-    text += `%0A`;
+    text += `\n`;
     
-    text += `*C. STRUKTUR MASA & SLOT*%0A`;
-    text += `Tempoh Sesi: ${formData.tempohSesi}%0A`;
-    text += `Bilangan Slot: ${formData.bilanganSlot}%0A`;
-    text += `Kekerapan: ${formData.kekerapan}%0A`;
-    text += `Hari Pilihan: ${formData.hariPilihan.join(', ')}%0A`;
-    text += `Masa Sesuai: ${formData.masaSesuai}%0A`;
-    text += `Tarikh Mula: ${formData.tarikhMula}%0A%0A`;
+    text += `*C. STRUKTUR MASA & SLOT*\n`;
+    text += `Tempoh Sesi: ${formData.tempohSesi}\n`;
+    text += `Bilangan Slot: ${formData.bilanganSlot}\n`;
+    text += `Kekerapan: ${formData.kekerapan}\n`;
+    text += `Hari Pilihan: ${formData.hariPilihan.join(', ')}\n`;
+    text += `Masa Sesuai: ${formData.masaSesuai}\n`;
+    text += `Tarikh Mula: ${formData.tarikhMula}\n\n`;
     
-    text += `*D. PROFIL PELAJAR*%0A`;
-    text += `Sasaran: ${formData.tahunSasaran}%0A`;
-    text += `Anggaran Pelajar: ${formData.anggaranPelajar}%0A`;
-    text += `Tahap Pelajar: ${formData.tahapPelajar}%0A`;
-    text += `Pelajar Komited: ${formData.pelajarKomited}%0A`;
-    text += `Ada Pemain Utama: ${formData.adaPemainUtama}%0A`;
+    text += `*D. PROFIL PELAJAR*\n`;
+    text += `Sasaran: ${formData.tahunSasaran}\n`;
+    text += `Anggaran Pelajar: ${formData.anggaranPelajar}\n`;
+    text += `Tahap Pelajar: ${formData.tahapPelajar}\n`;
+    text += `Pelajar Komited: ${formData.pelajarKomited}\n`;
+    text += `Ada Pemain Utama: ${formData.adaPemainUtama}\n`;
     if (formData.adaPemainUtama === 'Ya') {
-      text += `Pencapaian Terakhir: ${formData.pencapaianTerakhir}%0A`;
+      text += `Pencapaian Terakhir: ${formData.pencapaianTerakhir}\n`;
     }
-    text += `%0A`;
+    text += `\n`;
     
-    text += `*E. KEMUDAHAN & LOGISTIK*%0A`;
-    text += `Jumlah Set Catur: ${formData.jumlahSetCatur}%0A`;
-    text += `Papan Demo: ${formData.adaPapanDemo}%0A`;
-    text += `Projector: ${formData.adaProjector}%0A`;
-    text += `Ruang Khas: ${formData.adaRuangKhas}%0A`;
-    text += `Perlu Bawa Peralatan: ${formData.perluBawaPeralatan}%0A%0A`;
+    text += `*E. KEMUDAHAN & LOGISTIK*\n`;
+    text += `Jumlah Set Catur: ${formData.jumlahSetCatur}\n`;
+    text += `Papan Demo: ${formData.adaPapanDemo}\n`;
+    text += `Projector: ${formData.adaProjector}\n`;
+    text += `Ruang Khas: ${formData.adaRuangKhas}\n`;
+    text += `Perlu Bawa Peralatan: ${formData.perluBawaPeralatan}\n\n`;
     
-    text += `*F. JANGKAAN SEKOLAH*%0A`;
-    text += `${formData.jangkaanSekolah}%0A%0A`;
+    text += `*F. JANGKAAN SEKOLAH*\n`;
+    text += `${formData.jangkaanSekolah}\n\n`;
     
-    text += `*G. PERANCANGAN SUSULAN*%0A`;
+    text += `*G. PERANCANGAN SUSULAN*\n`;
     text += `${formData.perancanganSusulan}`;
     
-    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    const encodedText = encodeURIComponent(text);
+    window.open(`https://wa.me/${phone}?text=${encodedText}`, '_blank');
   };
 
   const renderHero = () => (
